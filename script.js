@@ -44,8 +44,42 @@ const handleCancel = function(){
   $('#js-meal-details').on('click',".cancel", function (event) {
     event.preventDefault();
     console.log('clicked cancel')
-    
+    let html =''
+    html = `<table id="customer">
+            <tr>
+            <td>
+              <input value="Base Meal Price: $"disabled>
+            </td>
+            <td>
+            <input type="number" name="js-base-meal-price" class="js-base-meal-price" placeholder="0.00">
+           
+            </td>
+            </tr>
+            <tr>
+              
+            <td>
+              <input value = "Tax Rate: %" disabled>
+                </td>
+            <td>
+             
+            <input type="number" name="tax-rate" class="tax-rate" placeholder=".00" step=".01">
+             
+            </td>
+            </tr>
+            <tr>
+            <td>
+              <input value= "Tip Percentage: %" disabled>
+              </td>
+            <td>
+             
+            <input type="number" name="tip-percentage" class="tip-percentage" placeholder="00">
+           
+            </td>
+            </tr>
+          </table>`
+           $(".meal-details-table").html(html) 
   })
+
 }
 const handleReset = function(){
 
@@ -71,11 +105,11 @@ const handleReset = function(){
     const taxRate = $('.tax-rate').val();
     $('.tax-rate').val('');
 
-    meal.taxRate = taxRate;
+    meal.taxRate = (taxRate/100);
     const tip = $('.tip-percentage').val();
     $('.tip-percentage').val('');
 
-    meal.tip = tip;
+    meal.tip = (tip/100);
   
     return meal
  }
@@ -84,7 +118,7 @@ const handleSubmit = function(){
 
 
   $('#js-meal-details').on('click',".submit",function (event) {
-
+    console.log('submitted')
     const meal = createMealObject()
     
     store.meals.push(meal)
@@ -104,7 +138,7 @@ console.log(parseFloat(meal.taxRate))
 const tip = tipCalc(meal).toFixed(2)
 
 const total = (parseFloat(subTotal) + parseFloat(tip)).toFixed(2)
-console.log(total)
+
   let html = `
 <table id="customer">
               <tr>
