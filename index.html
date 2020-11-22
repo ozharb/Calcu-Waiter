@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main>
+     <h1>Calcu-Waiter</h1>
+    <div class="wrapper">
+     
+
+       <div class='container-Meal-Details'>
+      <h2>Enter the Meal Details</h2>
+    
+        <form id="js-meal-details">
+          <div class = "meal-details-table">
+          <table id="customer">
+            <tr>
+            <td>
+              <input value="Base Meal Price: $"disabled>
+            </td>
+            <td>
+            <input type="number" name="js-base-meal-price" class="js-base-meal-price" placeholder="0.00">
+           
+            </td>
+            </tr>
+            <tr>
+              
+            <td>
+              <input value = "Tax Rate: %" disabled>
+                </td>
+            <td>
+             
+            <input type="number" name="tax-rate" class="tax-rate" placeholder=".00" step=".01">
+             
+            </td>
+            </tr>
+            <tr>
+            <td>
+              <input value= "Tip Percentage: %" disabled>
+              </td>
+            <td>
+             
+            <input type="number" name="tip-percentage" class="tip-percentage" placeholder=".00" step=".01">
+           
+            </td>
+            </tr>
+          </table>
+          </div>
+          <div class='meal-details-buttons'>
+        <button type="submit" class="submit">Submit</button>
+        <button class="cancel" type="cancel">Cancel</button>
+        <button class= "reset" type="reset">Reset</button>
+        </div>
+        </form>
+      </div>
+      <div class='container-charges'>
+        <h2>Customer Charges</h2>
+        <div class ="output-tables-customer">
+        <table id="customer">
+              <tr>
+              <td>   
+              <input value="Subtotal: $" disabled>
+              </td>
+              <td>
+              <input class="calcValue" value="0.00">
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input value="Tip: $" disabled> 
+              </td>
+              <td>
+              <input class="calcValue" value="0.00">
+              </td>
+              </tr>
+              <tr>
+              <td>
+              <input value="Total: $" disabled>
+              </td>
+              <td>
+                <input class="0.00" value="total">
+
+                </td>
+
+            </tr>
+      </table>
+        </div>
+ 
+        <h2>My Earnings Info</h2>
+        <div class ="output-tables-earnings">
+            <table id="customer">
+            <tr>
+              <td>   
+            <input value="Total: $" disabled>
+            </td>
+            <td>
+         
+            <input class="calcValue" value="0.00">
+         
+            </td>
+            </tr>
+            <tr>
+            <td>
+              <input value="Meal Count:" disabled> 
+              </td>
+            <td>
+              <input class="calcValue" value="0">
+              </td>
+            </tr>
+            <tr>
+               <td>
+                 <input value="Average Tip: %" disabled>
+                 </td>
+         
+              <td>
+    
+                <input class="calcValue" value=".00">
+
+                </td>
+
+            </tr>
+      </table>
+        </div>
+          </div>   
+        </div>
+    </main>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

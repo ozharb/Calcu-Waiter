@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color:gray;
+}
+.wrapper{
+  font-family: 'Courier New', Courier, monospace;
+ 
+ 
+}
+.container{
+  border: 2px solid gray; 
+  padding: 0;
+  margin: 10px;
+
+}
+
+
+.container-Meal-Details{
+padding: 10px;
+border: 4px solid gray;
+}
+
+#customer td {
+  border: 2px solid #ddd;
+  padding: 8px;
+  height:20px;
+  margin-left: 40px;
+
+}
+//.td1{
+  
+  text-align: right;
+ 
+}
+
+#customer tr:nth-child(even){
+  background-color: #f2f2f2;
+
+}
+#customer tr:hover {
+background-color: #ddd;
+}
+
+
+
+//li {
+ list-style: none;
+ padding: 10px;
+ margin: 0;
+ display: table-row;
+ table-layout: auto;
+}
+label{
+display: flex;
+}
+//ul{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+input{
+  display: table-cell;
+  width: 100px;
+ 
+}
+input:disabled{
+  background: none;
+  color: black;
+  text-align: right;
+  width: 120px;
+  border: none;
+  //margin-left: 120px;
+
+}
+h2{
+  text-align: center;
+}
+
+button{
+margin-top: 50px;
+margin-left: 20px;
+}
+.container-charges{
+  padding: 10px;
+  border: 4px solid gray;
+}
+.meal-details-table{
+display: flex;
+justify-content: center;
+}
+.output-tables-customer{
+display: flex;
+justify-content: center;
+}
+.output-tables-earnings{
+ display: flex;
+justify-content: center;
+}
+.meal-details-buttons{
+   display: flex;
+justify-content: center;
+}
+
+@media all and (min-width: 600px){
+  .wrapper{
+  
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+ 
+}
+.js-meal-details{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+  #customer{
+  //border-collapse:collapse;
+  width: 10px;
+  
+}
+.meal-details-table{
+display: flex;
+justify-content: center;
+}
+.output-tables-customer{
+display: flex;
+justify-content: center;
+}
+.output-tables-earnings{
+ display: flex;
+justify-content: center;
+}
+.meal-details-buttons{
+   display: flex;
+justify-content: center;
+}
+
+#Meal-Details{
+  margin-left: 90px;
+}
+
+input:disabled{
+ 
+  //margin-left: 220px;
+
+}
+h1{
+  font-size: 60px;
+}
+button{
+  margin-left: 20px;
+}
+}
