@@ -1,2 +1,5 @@
 # Calcu-Waiter
-Waitstaff Calculator
+* Enter Details
+* Get customer charges info and waiter info
+
+
